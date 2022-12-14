@@ -197,3 +197,28 @@ main {
   letter-spacing: var(--spacing);
   color: var(--clr-green-dark);
 }
+
+.next-question,
+.close-btn,
+.submit-btn {
+  border-radius: var(--radius);
+  border-color: transparent;
+  padding: 0.25rem 0.5rem;
+  display: block;
+  width: 35%;
+  margin-left: auto;
+  margin-top: 2rem;
+  text-transform: capitalize;
+  font-weight: 700;
+  letter-spacing: var(--spacing);
+  font-size: 1rem;
+  background: #ffb100;
+  color: var(--clr-black);
+  transition: var(--transition);
+  cursor: pointer;
+}
+.next-question:hover {
+  background: #805900;
+  color: #ffb100;
+}
+/*
