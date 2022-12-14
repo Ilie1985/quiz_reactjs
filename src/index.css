@@ -135,3 +135,27 @@ p {
     width: 95vw;
   }
 }
+
+/*
+=============== 
+Quiz
+===============
+*/
+
+main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.quiz {
+  width: 90vw;
+  max-width: var(--max-width);
+  margin: 4rem auto;
+  background: var(--clr-white);
+  border-radius: var(--radius);
+  padding: 3rem;
+}
+.quiz-small {
+  max-width: 500px;
+}
