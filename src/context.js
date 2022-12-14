@@ -20,7 +20,7 @@ const AppProvider = ({ children }) => {
   const [loading, setLoading] = useState(false);
   const [questions, setQuestions] = useState([]);
   const [index, setIndex] = useState(0);
-  const [correct, seCorrect] = useState(0);
+  const [correct, setCorrect] = useState(0);
   const [error, setError] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -62,8 +62,17 @@ const AppProvider = ({ children }) => {
     });
   };
 
-  //useEffect
+  //check answer func
+  const checkAnswer = (value) => {
+    if (value) {
+      setCorrect((oldState) => {
+        return oldState + 1;
+      });
+    }
+    nextQuestion()
+  };
 
+  //useEffect
   useEffect(() => {
     fetchQuestions(tempUrl);
   }, []);
@@ -79,6 +88,7 @@ const AppProvider = ({ children }) => {
         error,
         isModalOpen,
         nextQuestion,
+        checkAnswer,
       }}
     >
       {children}
