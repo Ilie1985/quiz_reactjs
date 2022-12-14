@@ -189,3 +189,11 @@ main {
   background: var(--clr-primary-5);
   color: var(--clr-white);
 }
+.correct-answers {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  text-align: right;
+  text-transform: capitalize;
+  letter-spacing: var(--spacing);
+  color: var(--clr-green-dark);
+}
