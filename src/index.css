@@ -248,3 +248,11 @@ Form
   width: 100%;
   border-radius: var(--radius);
 }
+.error {
+  color: var(--clr-red-dark);
+  text-transform: capitalize;
+}
+.submit-btn {
+  width: 100%;
+  margin-top: 3rem;
+}
