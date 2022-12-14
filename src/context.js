@@ -22,6 +22,11 @@ const AppProvider = ({ children }) => {
   const [index, setIndex] = useState(0);
   const [correct, setCorrect] = useState(0);
   const [error, setError] = useState(false);
+  const [quiz, setQuiz] = useState({
+    amount: 10,
+    category: "sports",
+    difficulty: "easy",
+  });
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   //fecth questions with axios
@@ -85,9 +90,16 @@ const AppProvider = ({ children }) => {
   };
 
   //useEffect
-  useEffect(() => {
-    fetchQuestions(tempUrl);
-  }, []);
+  // useEffect(() => {
+  //   fetchQuestions(tempUrl);
+  // }, []);
+
+  //placeholder functions
+  const handleChange = (e) => {};
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
 
   return (
     <AppContext.Provider
@@ -102,6 +114,9 @@ const AppProvider = ({ children }) => {
         nextQuestion,
         checkAnswer,
         closeModal,
+        quiz,
+        handleSubmit,
+        handleChange,
       }}
     >
       {children}
