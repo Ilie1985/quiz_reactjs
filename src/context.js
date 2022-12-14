@@ -95,7 +95,11 @@ const AppProvider = ({ children }) => {
   // }, []);
 
   //placeholder functions
-  const handleChange = (e) => {};
+  const handleChange = (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
+    setQuiz({...quiz,[name]:value})
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
